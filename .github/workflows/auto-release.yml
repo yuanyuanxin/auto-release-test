@@ -1,0 +1,29 @@
+name: Auto Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Auto Release
+        id: release
+        uses: wuji-technology/.github/actions/auto-release@feature/m-6689718405/auto-release
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          prerelease: false
+
+      - name: Show outputs
+        run: |
+          echo "Version: ${{ steps.release.outputs.version }}"
+          echo "Tag: ${{ steps.release.outputs.tag }}"
+          echo "Release URL: ${{ steps.release.outputs.release-url }}"
+          echo "Body: ${{ steps.release.outputs.body }}"
