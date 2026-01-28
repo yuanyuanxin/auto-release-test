@@ -16,7 +16,7 @@ jobs:
 
       - name: Auto Release
         id: release
-        uses: wuji-technology/.github/actions/auto-release@feature/m-6689718405/auto-release
+        uses: wuji-technology/.github/actions/auto-release@fc880480a445eda26fae14a594af79f4af87b774
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: false
