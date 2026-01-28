@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0-rc1] - 2026-01-28
+
+### Added
+- 测试 prerelease 版本
+
 ## [1.0.0] - 2026-01-28
 
 ### Added
